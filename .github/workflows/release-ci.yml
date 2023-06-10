@@ -56,11 +56,7 @@ jobs:
         run: |
           Compress-Archive -Path output\*.pdb -CompressionLevel Optimal -DestinationPath .\output\archives\symbols.zip
       
-      - name: Extract changelog
-        shell: pwsh
-        run: |
-          .\extract_changelog.ps1
-
+ 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
